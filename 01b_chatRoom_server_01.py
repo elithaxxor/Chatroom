@@ -16,14 +16,9 @@ while True:
     name_input = input("[USER-ID]** Enter Username: ")
     new_socket.listen(1)  # listen to connections
     print(f"[LISTENING]...")
-    #### !!!!!!!! INSERT TQDM !!!!!!!! ######
-    # https://www.youtube.com/watch?v=FptVpIPhdpM
-
     # accept new connections
-    conn, add = new_socket.accept()  # conn is connected to socket, add is client iP
-    # print(type(add, conn)) # (TAKES INCOMING CONNECTION)
-    print(f"[INCOMING] Connecting from [{add[0]}]")  ## calls the TUPLE estables earlier
-
+    conn, add = new_socket.accept()  #
+    print(f"[INCOMING] Connecting from [{add[0]}]")
     ## Store incoming data
     client = conn.recv(1024).decode("utf-8")  # .decode() # sets max at 1024 bytes
     print(f"[SUCCESS] {client} has connected")
@@ -37,12 +32,3 @@ while True:
         print(f"{client} : {message}")
 else:
     print("ASDFASDLFASD")
-
-
-# sever_host = input('[CONNECT-IP]** Enter the sever IP for connection: ') ## pass back to socket.gethostname()
-# cport = input('[CONNECT-PORT]** Enter the sever port for connection: ')
-# name_input = input('[USER-ID]** Enter Username: ')
-#
-
-# print(dir(sys))
-# print(dir())
