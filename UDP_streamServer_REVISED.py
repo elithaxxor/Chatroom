@@ -5,6 +5,7 @@ from cv2 import VideoCapture, waitKey
 
 
 
+
 HTML = """
 <html>
 <head>
@@ -18,6 +19,19 @@ HTML = """
 </html>
 """
 
+'''
+                pip install --upgrade pip
+                pip install --upgrade tensorflow
+                pip3 install keras
+                pip3 install pyshine
+                pip install sounddevice
+                pip install pysoundfile
+
+
+    create socket obj /// create bind/ // start listen //Accept connection// then recv connection // 
+    conditions-return // setuup header (data) // call main_stream  
+
+'''
 def webServer():
     def main_streamer():
         StreamProps = ps.StreamProps
@@ -42,9 +56,6 @@ def webServer():
         except Exception as e:
             print(f'Error in main_streamer {traceback.print_exc} \n \n {sys.exc_info()[2]} {e}')
 
-
-    '''create socket obj /// create bind/ // start listen //Accept connection// then recv connection // 
-    conditions-return // setuup header (data) // call main_stream  '''
 
     # data = "1.1200 OK\r\n"
     # data += "Content-Type: text/html; charset=utf-8
